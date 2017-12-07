@@ -235,10 +235,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | 2.27573			| 'No passing for vehicles over 3.5 metric tons'
 											
 
-
-
-
 For the second image 
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 19.136		| b'Ahead only'|									
@@ -248,6 +246,7 @@ For the second image
 
 
 For the third image 
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 3.94785		| b'Bumpy road'		|						
@@ -255,6 +254,7 @@ For the third image
 | 1.49978	      | b'Keep left'|
 
 For the fourth image 
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 9.39413		| b'Turn left ahead'|							
@@ -265,6 +265,7 @@ For the fourth image
 
 
 For the fifth image 
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 2.3366		| b'Keep left'|								
