@@ -217,9 +217,9 @@ Here are the results of the prediction:
 |:---------------------:|:---------------------------------------------:| 
 | 'General caution'		| 'General caution'									| 
 | 'Ahead only'			| 'Ahead only'									|
-| 'Slippery road'			| b'Bumpy road'											
+| 'Slippery road'			| 'Bumpy road'											
 | 'Turn left ahead'	| 'Turn left ahead'						 				|
-| 'Go straight or right'			| b'Keep left'						|
+| 'Go straight or right'			| 'Keep left'						|
 
 
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares favorably to the accuracy on the test set of ...
@@ -241,9 +241,9 @@ For the second image
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 19.136		| b'Ahead only'|									
-| 4.82936		| b'Children crossing'|							
-| 0.946134 	| b'General caution'|
+| 19.136		| 'Ahead only'|									
+| 4.82936		| 'Children crossing'|							
+| 0.946134 	| 'General caution'|
 
 
 
@@ -251,17 +251,17 @@ For the third image
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 3.94785		| b'Bumpy road'		|						
-| 2.21163		| b'Bicycles crossing'	|					
-| 1.49978	      | b'Keep left'|
+| 3.94785		| 'Bumpy road'		|						
+| 2.21163		| 'Bicycles crossing'	|					
+| 1.49978	      | 'Keep left'|
 
 For the fourth image 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 9.39413		| b'Turn left ahead'|							
-| 5.22894		| b'Keep right'|					
-| 3.11846	      | b'Right-of-way at the next intersection'|
+| 9.39413		| 'Turn left ahead'|							
+| 5.22894		| 'Keep right'|					
+| 3.11846	      | 'Right-of-way at the next intersection'|
 
 
 
@@ -270,12 +270,13 @@ For the fifth image
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 2.3366		| b'Keep left'|								
-| 1.33481		| b'Right-of-way at the next intersection'|							
+| 2.3366		| 'Keep left'|								
+| 1.33481		| 'Right-of-way at the next intersection'|							
 | 1.12441   	| b'Children crossing'|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+
 edge information, direction of image
 
 
