@@ -98,7 +98,7 @@ data_barchart.png
 2)use a subtractive local normalization,and a divisive local normalization to extract image edge information( Reference: Pierre Sermanet and Yann LeCun.Traffic Sign Recognition with Multi-Scale Convolutional Networks.)
 
 for additional datas,method used small translations, scaling  rotations, affine transformations, brightness, contrast and blur.
-After test, we find  brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future.£¨now result is not cluster and dilute  data energe£©
+After test, we find  brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future.Â£Â¨now result is not cluster and dilute  data energeÂ£Â©
 
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -110,26 +110,26 @@ My final model consisted of the following layers:
 | Input         		| 32x32x3 RGB image   							| 
 | Convolution 5x5     | 1x1 stride, same padding, outputs 
                 
- 	                 |      32x32x108
-                    	 |    Convolution1 5x5 	outputs 8x28x100 
-                       |   Convolution2 5x5   outputs 28x28x8 	
+|	                 |      32x32x108                                                               |
+|                  	 |    Convolution1 5x5 	outputs 8x28x100 
+|                        |   Convolution2 5x5   outputs 28x28x8 	                                |
 
 
-| RELU					| 											
-| Max pooling	      	| 2x2 stride,  outputs 14x14x108 				|
+| RELU					| 			                                        |								
+| Max pooling	      	| 2x2 stride,  outputs 14x14x108 			                	|
 | Convolution 5x5	    | outputs 28x28x108 		
-| RELU					| 												
-| Max pooling	      	| 2x2 stride,  outputs 14x14x108 
+| RELU					| 			                                        |									
+| Max pooling	      	| 2x2 stride,  outputs 14x14x108                                                |
 
-| Flatten				| outputs 2700								
-| Fully connected		| outputs 400				
-| RELU					| 
-| Softmax				| outputs 200	
+| Flatten				| outputs 2700		|						
+| Fully connected		| outputs 400			|	
+| RELU					|                       |
+| Softmax				| outputs 200    	|
 		
-| Fully connected		| outputs 200				
-| RELU					| 
+| Fully connected		| outputs 200		|		
+| RELU					| |
 		
-| Softmax				| outputs 100		
+| Softmax				| outputs 100	|	
 
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
