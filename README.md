@@ -199,6 +199,7 @@ If a well known architecture was chosen:
 Here are five German traffic signs that I found on the web:
 
 |imageID|image name|
+|:---------------------:|:---------------------------------------------:| 
 |1.jpg| 'General caution'|
 |2.jpg| 'Ahead only'|
 |3.jpg| 'Slippery road'|
