@@ -272,7 +272,7 @@ For the fifth image
 |:---------------------:|:---------------------------------------------:| 
 | 2.3366		| 'Keep left'|								
 | 1.33481		| 'Right-of-way at the next intersection'|							
-| 1.12441   	| b'Children crossing'|
+| 1.12441   	| 'Children crossing'|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
