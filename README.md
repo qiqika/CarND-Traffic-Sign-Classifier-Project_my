@@ -197,12 +197,12 @@ If a well known architecture was chosen:
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
-
-1.jpg 'General caution'
-2.jpg 'Ahead only'
-3.jpg 'Slippery road'
-4.jpg 'Turn left ahead'
-5.jpg 'Go straight or right'
+|imageID|image name|
+|1.jpg| 'General caution'|
+|2.jpg| 'Ahead only'|
+|3.jpg| 'Slippery road'|
+|4.jpg| 'Turn left ahead'|
+|5.jpg| 'Go straight or right'|
 
 
 The first image might be difficult to classify because ...
