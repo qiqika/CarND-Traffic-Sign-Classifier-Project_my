@@ -98,7 +98,7 @@ data_barchart.png
 2)use a subtractive local normalization,and a divisive local normalization to extract image edge information( Reference: Pierre Sermanet and Yann LeCun.Traffic Sign Recognition with Multi-Scale Convolutional Networks.)
 
 for additional datas,method used small translations, scaling  rotations, affine transformations, brightness, contrast and blur.
-After test, we find  brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future.£¨now result is not cluster and dilute  data energe£©
+After test, we find  brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future(now result is not cluster and dilute  data energe£)
 
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
