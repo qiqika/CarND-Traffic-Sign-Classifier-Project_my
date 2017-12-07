@@ -110,7 +110,7 @@ My final model consisted of the following layers:
 | Input         		| 32x32x3 RGB image   							| 
 | Convolution 5x5     | 1x1 stride, same padding, outputs      
 |	                 |      32x32x108                                                               |
-|                  	 |    Convolution1 5x5 	outputs 8x28x100                                        |
+|                  	 |    Convolution1 5x5 	outputs 28x28x100                                        |
 |                        |   Convolution2 5x5   outputs 28x28x8 	                                |
 | RELU					| 			                                        |				
 | Max pooling	      	| 2x2 stride,  outputs 14x14x108 			                	|
@@ -213,12 +213,11 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-
 | 'General caution'		| 'General caution'									| 
 | 'Ahead only'			| 'Ahead only'									|
 | 'Slippery road'			| b'Bumpy road'											
 | 'Turn left ahead'	| 'Turn left ahead'						 				|
-| 'Go straight or right'			| b'Keep left'						
+| 'Go straight or right'			| b'Keep left'						|
 
 
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares favorably to the accuracy on the test set of ...
@@ -232,8 +231,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 14.1807			| 'General caution'										
-| 2.29273			| 'No vehicles'
-										
+| 2.29273			| 'No vehicles'										
 | 2.27573			| 'No passing for vehicles over 3.5 metric tons'
 											
 
@@ -243,31 +241,25 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 For the second image 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 19.136		| b'Ahead only'
-									
-| 4.82936		| b'Children crossing'
-							
-| 0.946134 	| b'General caution'
+| 19.136		| b'Ahead only'|									
+| 4.82936		| b'Children crossing'|							
+| 0.946134 	| b'General caution'|
 
 
 
 For the third image 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 3.94785		| b'Bumpy road'
-								
-| 2.21163		| b'Bicycles crossing'
-						
-| 1.49978	      | b'Keep left'
+| 3.94785		| b'Bumpy road'		|						
+| 2.21163		| b'Bicycles crossing'	|					
+| 1.49978	      | b'Keep left'|
 
 For the fourth image 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 9.39413		| b'Turn left ahead'
-									
-| 5.22894		| b'Keep right'
-						
-| 3.11846	      | b'Right-of-way at the next intersection'
+| 9.39413		| b'Turn left ahead'|							
+| 5.22894		| b'Keep right'|					
+| 3.11846	      | b'Right-of-way at the next intersection'|
 
 
 
@@ -275,11 +267,9 @@ For the fourth image
 For the fifth image 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 2.3366		| b'Keep left'
-									
-| 1.33481		| b'Right-of-way at the next intersection'
-							
-| 1.12441   	| b'Children crossing'
+| 2.3366		| b'Keep left'|								
+| 1.33481		| b'Right-of-way at the next intersection'|							
+| 1.12441   	| b'Children crossing'|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
