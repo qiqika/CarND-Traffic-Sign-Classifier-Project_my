@@ -108,27 +108,21 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 5x5     | 1x1 stride, same padding, outputs 
-                
+| Convolution 5x5     | 1x1 stride, same padding, outputs      
 |	                 |      32x32x108                                                               |
-|                  	 |    Convolution1 5x5 	outputs 8x28x100 
+|                  	 |    Convolution1 5x5 	outputs 8x28x100                                        |
 |                        |   Convolution2 5x5   outputs 28x28x8 	                                |
-
-
-| RELU					| 			                                        |								
+| RELU					| 			                                        |				
 | Max pooling	      	| 2x2 stride,  outputs 14x14x108 			                	|
-| Convolution 5x5	    | outputs 28x28x108 		
-| RELU					| 			                                        |									
+| Convolution 5x5	    | outputs 28x28x108 		|
+| RELU					| 			                                        |				
 | Max pooling	      	| 2x2 stride,  outputs 14x14x108                                                |
-
 | Flatten				| outputs 2700		|						
 | Fully connected		| outputs 400			|	
 | RELU					|                       |
-| Softmax				| outputs 200    	|
-		
+| Softmax				| outputs 200    	|		
 | Fully connected		| outputs 200		|		
-| RELU					| |
-		
+| RELU					|               |		
 | Softmax				| outputs 100	|	
 
 
