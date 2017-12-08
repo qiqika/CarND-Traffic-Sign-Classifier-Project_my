@@ -32,6 +32,21 @@ The goals / steps of this project are the following:
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
+[//]: # (Image References)
+
+[image1]: ./myresult/visualization.jpg "Visualization"
+[image2]: ./myresult/grayscale.jpg "Grayscaling"
+[image3]: ./myresult/random_noise.jpg "Random Noise"
+[image4]: ./myresult/1.jpg "Traffic Sign 1"
+[image5]: ./myresult/2.jpg "Traffic Sign 2"
+[image6]: ./myresult/3.jpg "Traffic Sign 3"
+[image7]: ./myresult/4.jpg "Traffic Sign 4"
+[image8]: ./myresult/5.jpg "Traffic Sign 5"
+
+## Rubric Points
+###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+
+---
 
 ### Dependencies
 This lab requires:
@@ -87,7 +102,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
-data_barchart.png
+![alt text][image1]
 
 ###Design and Test a Model Architecture
 
@@ -97,9 +112,12 @@ data_barchart.png
 1)change RGB to YUV color space for combining color image three channel edge information into the Y space(luma)
 2)use a subtractive local normalization,and a divisive local normalization to extract image edge information( Reference: Pierre Sermanet and Yann LeCun.Traffic Sign Recognition with Multi-Scale Convolutional Networks.)
 
+![alt text][image2]
+
 for additional datas,method used small translations, scaling  rotations, affine transformations, brightness, contrast and blur.
 After test, we find  brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future(now result is not cluster and dilute  data energe£)
 
+![alt text][image3]
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
@@ -206,6 +224,8 @@ Here are five German traffic signs that I found on the web:
 |4.jpg| 'Turn left ahead'|
 |5.jpg| 'Go straight or right'|
 
+![alt text][image4] ![alt text][image5] ![alt text][image6] 
+![alt text][image7] ![alt text][image8]
 
 The first image might be difficult to classify because ...
 
