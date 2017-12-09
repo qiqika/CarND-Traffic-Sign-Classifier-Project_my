@@ -174,6 +174,7 @@ My final model results were:
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 first architecture:
+
 | Layer         		|  
 |:---------------------:|
 | EPOCHS = 10|
