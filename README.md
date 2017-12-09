@@ -36,7 +36,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./myresult/visualization.jpg "Visualization"
 [image2]: ./myresult/yuv_y.png "Grayscaling"
-[image3]: ./myresult/normalized image.png "Random Noise"
+[image3]: ./myresult/normalized_image.png "Random Noise"
 [image4]: ./myresult/1.jpg "Traffic Sign 1"
 [image5]: ./myresult/2.jpg "Traffic Sign 2"
 [image6]: ./myresult/3.jpg "Traffic Sign 3"
