@@ -255,10 +255,14 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because  image exists small affine transform. 
+The first image might be difficult to classify because  image exists small affine transform.  
+
 The second image might be difficult to classify because  image exists watermark noise . 
+
 The third image might be difficult to classify because  the most parts of image is snow and we need to deduce the image meaning from rest of parts. 
+
 The fourth image might be difficult to classify because  image exists shadow blur.
+
 The fifth image might be difficult to classify because  image exists inhomogeneous color change.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
