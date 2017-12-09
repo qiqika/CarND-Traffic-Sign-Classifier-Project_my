@@ -213,7 +213,7 @@ Typical adjustments could include choosing a different model architecture, addin
   
    2)convolution determine the filter type like sobel , wavelet etc. those make image energe focus on significant places.
    
-   3)after try relu and tanh function, relu is more unstable than tanh continuous function. but  relu perfomance is great. So, in training process, unlinear is a good choice.
+   3)after try relu and tanh function, relu is more unstable than tanh continuous function. but  relu perfomance may great. So, in training process, unlinear is a good choice.
    
    4)ensure the each image or data is unique is important for training.
    
