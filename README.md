@@ -228,6 +228,8 @@ Typical adjustments could include choosing a different model architecture, addin
    9)Optimization and Loss. Optimization and Loss help function find optimization solution, like SGD , adam, etc. 
    
    10)Early Stopping. if find accurate is too small, review the image data whether right or not. if want accurate value become high, try change layers structure to make more image like human face diffrent condition image.
+   
+   11)Weight Initialization. weight value will change learn rate and make start accurate huge change.
 
 If a well known architecture was chosen:
 * What architecture was chosen?
