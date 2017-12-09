@@ -203,15 +203,24 @@ Typical adjustments could include choosing a different model architecture, addin
 
   
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-  1)image data need irrelative and dont have pixel miss as well as possible. Because image data make edge information beacome code for classify
+  1)image data need irrelative and dont have pixel miss as well as possible. Because image data make edge information beacome code for classify.
+  
    2)convolution determine the filter type like sobel , wavelet etc. those make image energe focus on significant places.
+   
    3)after try relu and tanh function, relu is more unstable than tanh continuous function. but  relu perfomance is great. So, in training process, unlinear is a good choice.
-   4)ensure the each image or data is unique is important for training
+   
+   4)ensure the each image or data is unique is important for training.
+   
    5)Learning Rate is about to the optimization rate, if it is small, more time will be need.
+   
    6)Network Topology. more layers will enhance training efforts. espacially, when you add extra info to the training data in layer like reference Traffic Sign Recognition with Multi-Scale Convolutional Networks sets two different operator in first layer.
+   
    7)Batches and Epochs. batch depend on the computer calculate capable in some extent. epoch cant be too short, because training accurate is unstable and usually increase trend by number jitter.and there have high probability get local optimization. we need focus on accurate epoch change rules.
+   
    8)Regularization. i dont use Regularization, but Regularization can helps to avoid overfit i.e. local optimization.
+   
    9)Optimization and Loss. Optimization and Loss help function find optimization solution, like SGD , adam, etc. 
+   
    10)Early Stopping. if find accurate is too small, review the image data whether right or not. if want accurate value become high, try change layers structure to make more image like human face diffrent condition image.
 
 If a well known architecture was chosen:
