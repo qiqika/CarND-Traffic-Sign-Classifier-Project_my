@@ -35,8 +35,8 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./myresult/visualization.jpg "Visualization"
-[image2]: ./myresult/grayscale.jpg "Grayscaling"
-[image3]: ./myresult/random_noise.jpg "Random Noise"
+[image2]: ./myresult/yuv_y.png "Grayscaling"
+[image3]: ./myresult/normalized image.png "Random Noise"
 [image4]: ./myresult/1.jpg "Traffic Sign 1"
 [image5]: ./myresult/2.jpg "Traffic Sign 2"
 [image6]: ./myresult/3.jpg "Traffic Sign 3"
@@ -100,7 +100,7 @@ signs data set:
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data contribution.
 
 ![alt text][image1]
 
@@ -110,14 +110,17 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 
 1)change RGB to YUV color space for combining color image three channel edge information into the Y space(luma)
-2)use a subtractive local normalization,and a divisive local normalization to extract image edge information( Reference: Pierre Sermanet and Yann LeCun.Traffic Sign Recognition with Multi-Scale Convolutional Networks.)
 
 ![alt text][image2]
 
-for additional datas,method used small translations, scaling  rotations, affine transformations, brightness, contrast and blur.
-After test, we find  brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future(now result is not cluster and dilute  data energe£)
+2)use a subtractive local normalization,and a divisive local normalization to extract image edge information( Reference: Pierre Sermanet and Yann LeCun.Traffic Sign Recognition with Multi-Scale Convolutional Networks.)
 
 ![alt text][image3]
+
+for additional datas,method used small translations, scaling  rotations, affine transformations, brightness, contrast and blur.
+After test, we find  brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future(now result is not cluster and dilute  data energe)
+
+
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
@@ -171,10 +174,14 @@ My final model results were:
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 first architecture:
+
  EPOCHS = 10
+ 
  BATCH_SIZE = 128 (too large GPU cannot calculate in respect with store, too small accurate is not percise)
+ 
  mu = 0
- sigma =0.1(depend on the normalized image pixel value)
+ 
+  sigma =0.1(depend on the normalized image pixel value)
 
  layer1 convolution just have one image channel and simple normalized oparetor
  
@@ -252,9 +259,9 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 14.1807			| 'General caution'										
-| 2.29273			| 'No vehicles'										
-| 2.27573			| 'No passing for vehicles over 3.5 metric tons'
+| 14.1807			| 'General caution'				|						
+| 2.29273			| 'No vehicles'					 |					
+| 2.27573			| 'No passing for vehicles over 3.5 metric tons'|
 											
 
 For the second image 
