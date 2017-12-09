@@ -187,12 +187,17 @@ first architecture:
  
 
 * What were some problems with the initial architecture?
+
 1)avalidation accurate is low
+
 2)preprocess image edge is broken
+
 3)sigma will effect weight change
 
 * How was the architecture adjusted and why was it adjusted? 
+
 1)change preprocess method and make result image dont deform 
+
 2)make sigma around 0.5
 
 Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
@@ -203,6 +208,7 @@ Typical adjustments could include choosing a different model architecture, addin
 
   
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+
   1)image data need irrelative and dont have pixel miss as well as possible. Because image data make edge information beacome code for classify.
   
    2)convolution determine the filter type like sobel , wavelet etc. those make image energe focus on significant places.
