@@ -109,11 +109,11 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 ####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 
-1)change RGB to YUV color space for combining color image three channel edge information into the Y space(luma)
+1)change RGB to YUV color space for combining color image three channel edge information into the Y space(luma). So we can use reduce the data number by using y space image and if use the U,V space, can make image more unique.
 
 ![alt text][image2]
 
-2)use a subtractive local normalization,and a divisive local normalization to extract image edge information( Reference: Pierre Sermanet and Yann LeCun.Traffic Sign Recognition with Multi-Scale Convolutional Networks.)
+2)use a subtractive local normalization,and a divisive local normalization to extract image edge information( Reference: Pierre Sermanet and Yann LeCun.Traffic Sign Recognition with Multi-Scale Convolutional Networks.) it is good for data sparsing and cluster.
 
 ![alt text][image3]
 
@@ -126,10 +126,10 @@ After test, we find  brightness and contrast may cause image deformation, small 
 
 My final model consisted of the following layers:
 
-| Layer         		|     Description	        					| 
+| Layer         		|     Description	        				| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 5x5     | 1x1 stride, same padding, outputs      
+| Convolution 5x5     | 1x1 stride, same padding, outputs      |
 |	                 |      32x32x108                                                               |
 |                  	 |    Convolution1 5x5 	outputs 28x28x100                                        |
 |                        |   Convolution2 5x5   outputs 28x28x8 	                                |
@@ -206,6 +206,12 @@ Typical adjustments could include choosing a different model architecture, addin
    2)convolution determine the filter type like sobel , wavelet etc. those make image energe focus on significant places.
    3)after try relu and tanh function, relu is more unstable than tanh continuous function. but  relu perfomance is great. So, in training process, unlinear is a good choice.
    4)ensure the each image or data is unique is important for training
+   5)Learning Rate is about to the optimization rate, if it is small, more time will be need.
+   6)Network Topology. more layers will enhance training efforts. espacially, when you add extra info to the training data in layer like reference Traffic Sign Recognition with Multi-Scale Convolutional Networks sets two different operator in first layer.
+   7)Batches and Epochs. batch depend on the computer calculate capable in some extent. epoch cant be too short, because training accurate is unstable and usually increase trend by number jitter.and there have high probability get local optimization. we need focus on accurate epoch change rules.
+   8)Regularization. i dont use Regularization, but Regularization can helps to avoid overfit i.e. local optimization.
+   9)Optimization and Loss. Optimization and Loss help function find optimization solution, like SGD , adam, etc. 
+   10)Early Stopping. if find accurate is too small, review the image data whether right or not. if want accurate value become high, try change layers structure to make more image like human face diffrent condition image.
 
 If a well known architecture was chosen:
 * What architecture was chosen?
