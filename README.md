@@ -175,7 +175,7 @@ If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 first architecture:
 
-| Layer         		|  
+| Parameters|  
 |:---------------------:|
 | EPOCHS = 10|
 | BATCH_SIZE = 128 (too large GPU cannot calculate in respect with store, too small accurate is not percise)|
