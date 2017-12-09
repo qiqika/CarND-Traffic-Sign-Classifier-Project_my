@@ -169,21 +169,19 @@ My final model results were:
 * validation set accuracy of ?
   97%
 * test set accuracy of ?
-  95%
+  94%
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 first architecture:
-
- EPOCHS = 10
- 
- BATCH_SIZE = 128 (too large GPU cannot calculate in respect with store, too small accurate is not percise)
- 
- mu = 0
- 
-  sigma =0.1(depend on the normalized image pixel value)
-
- layer1 convolution just have one image channel and simple normalized oparetor
+| Layer         		|  
+|:---------------------:|
+| EPOCHS = 10|
+| BATCH_SIZE = 128 (too large GPU cannot calculate in respect with store, too small accurate is not percise)|
+| Optimiser = Adam(reference: ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION. adam is diagonal rescaling robust and fit for non-stationary problems )|
+| mu = 0|
+| sigma =0.1(depend on the normalized image pixel value)|
+| layer1 convolution just have one image channel and simple normalized oparetor|
  
 
 * What were some problems with the initial architecture?
@@ -234,7 +232,11 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+The first image might be difficult to classify because  image exists small affine transform. 
+The second image might be difficult to classify because  image exists watermark noise . 
+The third image might be difficult to classify because  the most parts of image is snow and we need to deduce the image meaning from rest of parts. 
+The fourth image might be difficult to classify because  image exists shadow blur.
+The fifth image might be difficult to classify because  image exists inhomogeneous color change.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -249,7 +251,7 @@ Here are the results of the prediction:
 | 'Go straight or right'			| 'Keep left'						|
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares similar to the accuracy on the test set of small affine transform, noise and blur as 1.jpg, 2.jpg, 4.jpg. And results also shows model cannot deduce the whole image by some parts of image and cannot fight  with big image deformation like color change while shape not.
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -259,18 +261,24 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 14.1807			| 'General caution'				|						
-| 2.29273			| 'No vehicles'					 |					
-| 2.27573			| 'No passing for vehicles over 3.5 metric tons'|
+| 18.267069			| 'General caution'				|						
+| 11.561676			| 'Double curve'					 |					
+| 7.834867			| 'Road narrows on the right'|
+| 7.439065			| 'Children crossing'					 |					
+| 6.7417784			| 'Speed limit (60km/h)'|
 											
 
 For the second image 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 19.136		| 'Ahead only'|									
-| 4.82936		| 'Children crossing'|							
-| 0.946134 	| 'General caution'|
+| 28.280853		| 'Ahead only'|									
+| 6.9413133		| 'Road narrows on the right'|							
+| 5.0935559 	        | 'Yield'|
+| 4.9019399			| 'Turn right ahead'					 |					
+| 4.8930273			| 'Speed limit (60km/h)'|
+
+
 
 
 
@@ -278,28 +286,32 @@ For the third image
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 3.94785		| 'Bumpy road'		|						
-| 2.21163		| 'Bicycles crossing'	|					
-| 1.49978	      | 'Keep left'|
+| 2.4563167		| 'Bicycles crossing'		|						
+| 2.2535417		| 'Road narrows on the right'	|					
+| 1.8545729	      | 'Beware of ice/snow'|
+| 1.4050156			| 'Wild animals crossing'					 |					
+| 1.2658368			| 'Road work'|
 
 For the fourth image 
-
+ 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 9.39413		| 'Turn left ahead'|							
-| 5.22894		| 'Keep right'|					
-| 3.11846	      | 'Right-of-way at the next intersection'|
-
-
+| 14.052359		| 'Turn left ahead'|							
+| 7.2908397		| 'Speed limit (30km/h)'|					
+| 5.6769919	      | 'Road narrows on the right'|
+| 5.2392116			| 'Dangerous curve to the left'					 |					
+| 4.8996344			| 'Go straight or left'|
 
 
 For the fifth image 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 2.3366		| 'Keep left'|								
-| 1.33481		| 'Right-of-way at the next intersection'|							
-| 1.12441   	| 'Children crossing'|
+| 4.3794479		| 'Children crossing'|								
+| 3.0187306		| 'Speed limit (60km/h)'|							
+| 1.8864288   	| 'Bicycles crossing'|
+| 1.7862785			| 'Speed limit (80km/h)'					 |					
+| 1.5917232			| 'Dangerous curve to the right'|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
