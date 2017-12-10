@@ -35,13 +35,14 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./myresult/visualization.jpg "Visualization"
-[image2]: ./myresult/yuv_y.png "Grayscaling"
-[image3]: ./myresult/normalized_image.png "Random Noise"
+[image2]: ./myresult/yuv_y.png "Y image"
+[image3]: ./myresult/normalized_image.png "normalized_image"
 [image4]: ./myresult/1.jpg "Traffic Sign 1"
 [image5]: ./myresult/2.jpg "Traffic Sign 2"
 [image6]: ./myresult/3.jpg "Traffic Sign 3"
 [image7]: ./myresult/4.jpg "Traffic Sign 4"
 [image8]: ./myresult/5.jpg "Traffic Sign 5"
+[image9]: ./myresult/my_visualize_cnn.png "visualize_conv1"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -348,5 +349,6 @@ For the fifth image
 
 edge information, direction of image
 
+![alt text][image9]
 
 
