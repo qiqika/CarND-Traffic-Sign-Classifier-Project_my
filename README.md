@@ -169,9 +169,9 @@ My final model results were:
 * training set accuracy of ?
   99%
 * validation set accuracy of ?
-  97%
+  98%
 * test set accuracy of ?
-  94%
+  96%
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -224,13 +224,13 @@ Typical adjustments could include choosing a different model architecture, addin
    
    7)Batches and Epochs. batch depend on the computer calculate capable in some extent. epoch cant be too short, because training accurate is unstable and usually increase trend by number jitter.and there have high probability get local optimization. we need focus on accurate epoch change rules.
    
-   8)Regularization. i dont use Regularization, but Regularization can helps to avoid overfit i.e. local optimization.
+   8)Regularization. Regularization can helps to avoid overfit i.e. local optimization.
    
    9)Optimization and Loss. Optimization and Loss help function find optimization solution, like SGD , adam, etc. 
    
    10)Early Stopping. if find accurate is too small, review the image data whether right or not. if want accurate value become high, try change layers structure to make more image like human face diffrent condition image.
    
-   11)Weight Initialization. weight value will change learn rate and make start accurate huge change.
+   11)Weight Initialization. weight value will change learn rate and make start accurate huge change. weight size is about details extraction. if size small , cnn will use fewer pixels to train which hold more small feature.
 
 If a well known architecture was chosen:
 * What architecture was chosen?
@@ -281,13 +281,13 @@ Here are the results of the prediction:
 | 'Go straight or right'			| 'Go straight or right'						|
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares similar to the accuracy on the test set of small affine transform, noise and blur as 1.jpg, 2.jpg, 4.jpg. And results also shows model cannot deduce the whole image by some parts of image and cannot fight  with big image deformation like color change while shape not.
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares similar to the accuracy on the test set of small affine transform, noise and blur as 1.jpg, 2.jpg, 4.jpg. And results also shows model cannot deduce the whole image by some parts of image . when image have big image deformation like color change while shape not, the accurate is not some stable.
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top three soft max probabilities were
+For the first image, the model is relatively sure that this is a stop sign (probability of 0.8), and the image does contain a stop sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -297,9 +297,6 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | 5.348145			| 'Traffic signals'					 |					
 | 5.0472765			| 'Road narrows on the right'|
 											
-
-
-
 
 For the second image 
 
