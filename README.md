@@ -169,9 +169,9 @@ My final model results were:
 * training set accuracy of ?
   99%
 * validation set accuracy of ?
-  98%
+  97%
 * test set accuracy of ?
-  96%
+  94%
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
