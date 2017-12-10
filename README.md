@@ -130,7 +130,7 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        				| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 5x5     | 1x1 stride, same padding, outputs      |
+| Convolution 3x3     | 1x1 stride, same padding, outputs      |
 |	                 |      32x32x108                                                               |
 |                  	 |    Convolution1 3x3 	outputs 30x30x100                                        |
 |                        |   Convolution2 3x3   outputs 30x30x8 	                                |
