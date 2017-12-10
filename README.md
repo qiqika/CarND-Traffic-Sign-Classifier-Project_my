@@ -275,9 +275,9 @@ Here are the results of the prediction:
 |:---------------------:|:---------------------------------------------:| 
 | 'General caution'		| 'General caution'									| 
 | 'Ahead only'			| 'Ahead only'									|
-| 'Slippery road'			| 'Bumpy road'											
+| 'Slippery road'			| 'Road narrows on the right'								|	
 | 'Turn left ahead'	| 'Turn left ahead'						 				|
-| 'Go straight or right'			| 'Keep left'						|
+| 'Go straight or right'			| 'Go straight or right'						|
 
 
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares similar to the accuracy on the test set of small affine transform, noise and blur as 1.jpg, 2.jpg, 4.jpg. And results also shows model cannot deduce the whole image by some parts of image and cannot fight  with big image deformation like color change while shape not.
@@ -290,57 +290,58 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 18.267069			| 'General caution'				|						
-| 11.561676			| 'Double curve'					 |					
-| 7.834867			| 'Road narrows on the right'|
-| 7.439065			| 'Children crossing'					 |					
-| 6.7417784			| 'Speed limit (60km/h)'|
+| 12.067934			| 'General caution'				|						
+| 9.3139172			| 'Wild animals crossing'					 |					
+| 7.499558			| 'Road work'|
+| 5.348145			| 'Traffic signals'					 |					
+| 5.0472765			| 'Road narrows on the right'|
 											
+
+
+
 
 For the second image 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 28.280853		| 'Ahead only'|									
-| 6.9413133		| 'Road narrows on the right'|							
-| 5.0935559 	        | 'Yield'|
-| 4.9019399			| 'Turn right ahead'					 |					
-| 4.8930273			| 'Speed limit (60km/h)'|
-
-
-
+| 36.054581		| 'Ahead only'|									
+| 9.9711342		| 'Turn right ahead'|							
+| 7.1837049 	        | 'Go straight or left'|
+| 3.1163545			| 'Keep left'					 |					
+| 2.2545176			| 'Children crossing'|
 
 
 For the third image 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 2.4563167		| 'Bicycles crossing'		|						
-| 2.2535417		| 'Road narrows on the right'	|					
-| 1.8545729	      | 'Beware of ice/snow'|
-| 1.4050156			| 'Wild animals crossing'					 |					
-| 1.2658368			| 'Road work'|
+| 3.4634168		| 'Road narrows on the right'		|						
+| 3.4086015		| 'Road work'	|					
+| 1.4387584	      | 'Slippery road'|
+| 1.4270226			| 'Roundabout mandatory'					 |					
+| 1.1857923			| 'Wild animals crossing'|
+
 
 For the fourth image 
  
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 14.052359		| 'Turn left ahead'|							
-| 7.2908397		| 'Speed limit (30km/h)'|					
-| 5.6769919	      | 'Road narrows on the right'|
-| 5.2392116			| 'Dangerous curve to the left'					 |					
-| 4.8996344			| 'Go straight or left'|
+| 16.780542		| 'Turn left ahead'|							
+| 6.5700932		| 'Yield'|					
+| 2.7808466	      | 'No entry'|
+| 2.4858758			| 'Speed limit (30km/h)'					 |					
+| 2.4331439			| 'Right-of-way at the next intersection'|
 
 
 For the fifth image 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 4.3794479		| 'Children crossing'|								
-| 3.0187306		| 'Speed limit (60km/h)'|							
-| 1.8864288   	| 'Bicycles crossing'|
-| 1.7862785			| 'Speed limit (80km/h)'					 |					
-| 1.5917232			| 'Dangerous curve to the right'|
+| 4.8400264		| 'Go straight or right'|								
+| 4.2161355		| 'Road work'|							
+| 2.6225283   	| 'Right-of-way at the next intersection'|
+| 0.39990959			| 'Speed limit (80km/h)'					 |					
+| 0.22273867			| 'Stop'|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
