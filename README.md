@@ -81,7 +81,7 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 ####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I used the pandas library to calculate summary statistics of the traffic
+I used the numpy library to calculate summary statistics of the traffic
 signs data set:
 
 * The size of training set is ? 
@@ -101,7 +101,7 @@ signs data set:
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data contribution.
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data contribution by using pandas. 
 
 ![alt text][image1]
 
@@ -114,12 +114,12 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ![alt text][image2]
 
-2)use a subtractive local normalization,and a divisive local normalization to extract image edge information( Reference: Pierre Sermanet and Yann LeCun.Traffic Sign Recognition with Multi-Scale Convolutional Networks.) it is good for data sparsing and clustering.
+2)use a subtractive local normalization,and a divisive local normalization to extract image edge information( Reference: Pierre Sermanet and Yann LeCun.Traffic Sign Recognition with Multi-Scale Convolutional Networks.). The normolization is a process that changes the range of pixel intensity values to range 0 to 1. in some extent, its image result is similar to the brightness and contrast. and it is good for data sparsing and clustering.
 
 ![alt text][image3]
 
 for additional datas,method used small translations, scaling  rotations, affine transformations, brightness, contrast and blur.
-After test, i find  brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future(now result dont have good cluster result and dilute  data energe)
+After test, i find straightly brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future(now result dont have good cluster result and dilute  data energe)
 
 
 
@@ -152,15 +152,16 @@ My final model consisted of the following layers:
 
 To train the model, I used an tensorflow and parameters:
 
-| parameters        		|
-|:---------------------:|
-|EPOCHS = 10|
-|BATCH_SIZE = 64|
-|mu = 0|
-|sigma =0.05|
-|weight = tf.Variable(tf.truncated_normal())|
-|bias = tf.Variable(tf.zeros())|
-|learning rate = 0.001|
+| parameters        		|reason|
+|:---------------------:|:---------------------:|
+|EPOCHS = 10|using 10 can help tune model and show the train trend|
+|BATCH_SIZE = 64| i also tried 128, 64 and 38 , but 128 and 38 cant enhance result like 64|
+|mu = 0|it didnt change accurate if i changed numberr|
+|sigma =0.05|i also tried 10, 1 , 0.05 and 0.0001 , but 10 , 1 and 0.0001 cant enhance result like 0.05|
+|weight = tf.Variable(tf.truncated_normal())|i just use truncated_normal() which got values by cutting the random contribution|
+|bias = tf.Variable(tf.zeros())|initializing bias by zero and using each epoch to update data |
+|learning rate = 0.001|using 0.001 is not too small or large ,and can help to find better optimization|
+|Optimiser = Adam(reference: ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION) |adam is diagonal rescaling robust and fit for non-stationary problems )|
 
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
