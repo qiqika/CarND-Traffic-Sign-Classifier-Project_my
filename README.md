@@ -119,7 +119,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 ![alt text][image3]
 
 for additional datas,method used small translations, scaling  rotations, affine transformations, brightness, contrast and blur.
-After test, i find straightly brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future(now result dont have good cluster result and dilute  data energe)
+After test, i find straightly changing brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future(now result dont have good cluster result and dilute  data energe)
 
 
 
@@ -152,16 +152,16 @@ My final model consisted of the following layers:
 
 To train the model, I used an tensorflow and parameters:
 
-| parameters        		|reason|
+| parameters        		|reasons|
 |:---------------------:|:---------------------:|
-|EPOCHS = 10|using 10 can help tune model and show the train trend|
+|EPOCHS = 10|using 10 can help to tune model and show the train trend|
 |BATCH_SIZE = 64| i also tried 128, 64 and 38 , but 128 and 38 cant enhance result like 64|
 |mu = 0|it didnt change accurate if i changed numberr|
-|sigma =0.05|i also tried 10, 1 , 0.05 and 0.0001 , but 10 , 1 and 0.0001 cant enhance result like 0.05|
+|sigma =0.05|i also tried 10, 1 , 0.05 and 0.0001 , but 10 , 1 and 0.0001 cant enhance accurate result like 0.05|
 |weight = tf.Variable(tf.truncated_normal())|i just use truncated_normal() which got values by cutting the random contribution|
 |bias = tf.Variable(tf.zeros())|initializing bias by zero and using each epoch to update data |
 |learning rate = 0.001|using 0.001 is not too small or large ,and can help to find better optimization|
-|Optimiser = Adam(reference: ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION) |adam is diagonal rescaling robust and fit for non-stationary problems )|
+|Optimiser = Adam(reference: ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION) |adam utility one order and second order to self-adaptly change gobal rate to each training unit and merely use small store, so it have good sparse property and fast get optimal parameters |
 
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
