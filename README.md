@@ -161,7 +161,7 @@ To train the model, I used an tensorflow and parameters:
 |weight = tf.Variable(tf.truncated_normal())|i just use truncated_normal() which got values by cutting the random contribution|
 |bias = tf.Variable(tf.zeros())|initializing bias by zero and using each epoch to update data |
 |learning rate = 0.001|using 0.001 is not too small or large ,and can help to find better optimization|
-|Optimiser = Adam(reference: ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION) |adam utility one order and second order to self-adaptly change gobal rate to each training unit and merely use small store, so it have good sparse property and fast get optimal parameters |
+|Optimiser = Adam(reference: ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION) |adam utilitise first moment and second moment to self-adaptly change gobal rate to each training unit and merely use small store, so it have good sparse property and fast get optimal parameters |
 
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
