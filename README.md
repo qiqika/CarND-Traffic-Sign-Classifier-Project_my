@@ -119,7 +119,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 ![alt text][image3]
 
 for additional datas,method used small translations, scaling  rotations, affine transformations, brightness, contrast and blur.
-After test, i find straightly changing brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future(now result dont have good cluster result and dilute  data energe)
+After test, i find  changing straightly brightness and contrast may cause image deformation, small translations, scaling , rotations and affine transformations need take care of producing dark pixels. preprocess will be make further optimizing, in future(now result dont have good cluster result and dilute  data energe)
 
 
 
